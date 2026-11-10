@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Primeiros passos com JavaScript</title>
+</head>
+<body>
+    <h1>Aprendendo JavaScript</h1>
+
+    <div id="resultado"></div>
+
+    <script>
+        alert("Olá Mundo!!");
+
+        const nome = prompt("Qual é o seu nome?");
+        const idade = prompt("Qual é a sua idade?");
+
+        document.getElementById("resultado").innerHTML =
+            "Olá, " + nome + "! Você tem " + idade + " anos.";
+
+   
+        let numero1 = Number(prompt("Digite o primeiro número:", 10));
+        let numero2 = Number(prompt("Digite o segundo número:", 5));
+        let soma = numero1 + numero2;
+
+        document.write("<h2>Desafio 2 - A máquina de somar</h2>");
+        document.write("Você somou " + numero1 + " + " + numero2 + " e o resultado foi " + soma + ".");
+
+        numero1 = Number(prompt("Digite o primeiro número para multiplicar:"));
+        numero2 = Number(prompt("Digite o segundo número para multiplicar:"));
+        let produto = numero1 * numero2;
+
+        document.write("<h2>Desafio 3 - Multiplicação simples</h2>");
+        document.write("Resultado da multiplicação: " + produto);
+
+
+        let numero = Number(prompt("Digite um número para descobrir o dobro:"));
+        let dobro = numero * 2;
+
+        document.write("<h2>Desafio 4 - Descubra o dobro</h2>");
+        document.write("O dobro de " + numero + " é " + dobro + ".");
+
+
+        let metros = Number(prompt("Digite o valor em metros:"));
+        let centimetros = metros * 100;
+
+        document.write("<h2>Desafio 5 - Conversor de medidas</h2>");
+        document.write(metros + " metros equivalem a " + centimetros + " centímetros.");
+
+        let lado = Number(prompt("Digite o valor do lado do quadrado:"));
+        let area = lado * lado;
+
+        document.write("<h2>Desafio 6 - Área do quadrado</h2>");
+        document.write("A área do quadrado é " + area + ".");
+
+        numero1 = Number(prompt("Digite o primeiro número:"));
+        numero2 = Number(prompt("Digite o segundo número:"));
+        let numero3 = Number(prompt("Digite o terceiro número:"));
+        soma = numero1 + numero2 + numero3;
+
+        document.write("<h2>Desafio 7 - Soma de três números</h2>");
+        document.write("A soma dos três números é " + soma + ".");
+
+        numero = Number(prompt("Digite um número para calcular o quadrado:"));
+        let quadrado = numero * numero;
+
+        document.write("<h2>Desafio 8 - O poder do quadrado</h2>");
+        document.write("O quadrado de " + numero + " é " + quadrado + ".");
+
+     
+        function multiplicar(numero1, numero2) {
+            let resultado = numero1 * numero2;
+            document.write("<h2>Desafio 9 - Multiplicação com função</h2>");
+            document.write("Resultado: " + resultado);
+        }
+
+        multiplicar(8, 3);
+
+
+        function saudar() {
+            const nome = prompt("Qual é o seu nome?");
+            document.write("<h2>Desafio 10 - Saudação</h2>");
+            document.write("Olá, " + nome + "! Seja bem-vindo ao mundo da programação. Você está dando seus primeiros passos!");
+        }
+
+        saudar();
+
+        function calculadoraBoasVindas() {
+            const nome = prompt("Qual é o seu nome?");
+            let numero1 = Number(prompt("Digite o primeiro número:"));
+            let numero2 = Number(prompt("Digite o segundo número:"));
+
+            let soma = numero1 + numero2;
+            let multiplicacao = numero1 * numero2;
+            let dobro = numero1 * 2;
+
+            document.write("<h2>Missão extra - Calculadora de boas-vindas</h2>");
+            document.write("Olá, " + nome + "!<br>");
+            document.write("Primeiro número: " + numero1 + "<br>");
+            document.write("Segundo número: " + numero2 + "<br>");
+            document.write("Soma: " + soma + "<br>");
+            document.write("Multiplicação: " + multiplicacao + "<br>");
+            document.write("Dobro do primeiro número: " + dobro + "<br>");
+            document.write("Parabéns! Você concluiu sua primeira calculadora em JavaScript.");
+        }
+
+        calculadoraBoasVindas();
+    </script>
+</body>
+</html>
